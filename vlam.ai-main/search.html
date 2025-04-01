@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vlam.ai</title>
+  <!-- Load Tailwind in the <head> so there's no flicker -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <style>
+    :root {
+      --groen-100: #39870C;
+      --groen-75: #6AA549;
+    }
+
+    @font-face {
+      font-family: 'ROsanswebtextregular';
+      src: url('ROsanswebtextregular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'ROsanswebtextbold';
+      src: url('ROsanswebtextbold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'ROsanswebtextregular', monospace;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, strong {
+      font-family: 'ROsanswebtextbold', monospace;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="relative w-full flex flex-col md:flex-row h-auto md:h-screen overflow-hidden">
+
+  <!-- LEFT SIDE (Green) -->
+  <div id="leftSideContent" class="flex w-full md:w-1/2 bg-[var(--groen-100)] flex-col items-center justify-center px-12 text-center md:items-end md:text-left min-h-[500px] md:h-full">
+    <div class="max-w-[17rem]">
+      <h1 class="text-white text-8xl font-bold tracking-tighter leading-[0.6]">vlam.ai</h1>
+      <p class="text-white mt-1 tracking-tight text-2xl font-bold">veilige lokale AI modellen</p>
+      <p class="text-white mt-3 text-lg leading-none">Wij brengen AI-modellen veilig, snel en schaalbaar naar productie binnen de Rijksoverheid.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex w-full md:w-1/2 max-w-sm flex-col items-start justify-center px-12 text-[var(--groen-100)] mx-auto md:mx-0 min-h-[500px] md:h-full">
+    <!-- /api -->
+    <a href="api.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="opacity-50 text-4xl font-bold leading-none tracking-tight mb-2 group-hover:underline">/api</h2>
+      <p class="opacity-50 text-base text-black leading-none">Breng veilig eigen AI-apps naar productie voor de Rijksoverheid.</p>
+    </a>
+
+    <!-- /chat -->
+    <a href="chat.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="opacity-50 text-4xl font-bold leading-none tracking-tight mb-2 group-hover:underline">/chat</h2>
+      <p class="opacity-50 text-base text-black leading-none">Chat veilig met generatieve AI zonder gevoelige data te lekken.</p>
+    </a>
+
+    <!-- /search -->
+    <a href="search.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="underline text-5xl font-bold leading-none tracking-tight mb-2 group-hover:underline">/search</h2>
+      <p class="text-lg text-black leading-none">Doorzoek snel openbare overheidsinformatie met krachtige AI.</p>
+    </a>
+  </div>
+
+  <!-- Logo -->
+  <img src="RO_logo.svg" alt="Rijksoverheid Logo" class="absolute top-0 left-1/2 transform -translate-x-1/2 h-32" />
+
+</section>
+
+<!-- Section 2: Voor wie is /search bedoeld? -->
+<section class="bg-[#EBF3E7] py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight">Voor wie is vlam-search bedoeld?</h2>
+    <p class="mt-4 text-xl leading-relaxed">De <strong>vlam-search pilot</strong> is speciaal ontwikkeld voor ambtenaren die snel en betrouwbaar publieke informatie moeten doorzoeken...</p>
+    <ul class="list-[square] pl-6 mt-4 text-xl leading-relaxed space-y-4">
+      <li><strong>Het beantwoorden van kamervragen:</strong> Vind relevante feiten en documenten om goed onderbouwde antwoorden te geven.</li>
+      <li><strong>WOO-verzoeken:</strong> Doorzoek eenvoudig grote hoeveelheden openbare overheidsinformatie om tijdig te voldoen aan verzoeken op basis van de Wet open overheid.</li>
+    </ul>
+    <p class="mt-4 text-xl leading-relaxed">Met <strong>vlam-search</strong> bespaar je tijd, vergroot je je inzicht en maak je beleidsvoorbereiding of onderzoek efficiënter en effectiever.</p>
+  </div>
+</section>
+
+<!-- Chat over publieke overheidsdocumenten -->
+<section class="bg-white py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight mb-8">Bevraag documenten</h2>
+    <p class="text-xl leading-relaxed mb-8">Met <strong>vlam-search</strong> kun je eenvoudig chatten over informatie uit openbare overheidsdocumenten...</p>
+
+    <!-- Two Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Traditioneel zoeken -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Traditioneel zoeken</h3>
+        <ul class="list-[square] pl-6 text-xl leading-relaxed space-y-4">
+          <li>Je moet meerdere documenten openen en handmatig zoeken naar relevante informatie.</li>
+          <li>Het kost tijd om de juiste documenten te vinden en te begrijpen.</li>
+          <li>Hierdoor kun je gemakkelijk belangrijke details over het hoofd zien.</li>
+        </ul>
+      </div>
+
+      <!-- Chatten met AI via vlam-search -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Bevraag via vlam-search</h3>
+        <ul class="list-[square] pl-6 text-xl leading-relaxed space-y-4">
+          <li>Met <strong>vlam-search</strong> stel je je vraag direct aan een slim AI-model.</li>
+          <li>Het model begrijpt je vraag en geeft snelle en nauwkeurige antwoorden, gebaseerd op de documenten in de database.</li>
+          <li>Bij elk antwoord wordt verwezen naar de documenten waar de informatie vandaan komt, zodat je de bron kunt bekijken en controleren.</li>
+          <li>Je kunt ook vervolgvragen stellen om dieper in te gaan op het onderwerp, zonder steeds opnieuw te zoeken.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-xl leading-relaxed mt-8">Met <strong>vlam-search</strong> krijg je niet alleen de juiste antwoorden, maar ook directe toegang tot de relevante documenten...</p>
+  </div>
+</section>
+
+<!-- Slim zoeken met vlam-search -->
+<section class="bg-[#EBF3E7] py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight mb-8">Zoek slimmer</h2>
+    <p class="text-xl leading-relaxed mb-8">Met <strong>vlam-search</strong> gebruik je een slim AI-model...</p>
+
+    <h3 class="text-3xl text-[#39870C] font-bold mb-8">Stel je zoekt naar "klimaatbeleid in Groenstad"</h3>
+
+    <!-- Two Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Keyword-based Search -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Zoeken op woorden</h3>
+        <ul class="list-[square] pl-6 text-xl leading-relaxed space-y-4">
+          <li>Het systeem zoekt alleen naar documenten waar de woorden <strong>"klimaatbeleid"</strong> en <strong>"Groenstad"</strong> letterlijk in staan.</li>
+          <li>Een document dat het heeft over <strong>"duurzamere leefomgeving in Groenstad"</strong>, maar niet het woord <strong>"klimaatbeleid"</strong> gebruikt, wordt niet gevonden.</li>
+        </ul>
+      </div>
+
+      <!-- Semantic Search -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Zoeken op betekenis</h3>
+        <ul class="list-[square] pl-6 text-xl leading-relaxed space-y-4">
+          <li>Het RAG-model kijkt naar de <strong>betekenis</strong> van woorden...</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-xl leading-relaxed mt-8">Met het <strong>RAG-model</strong> krijg je een breder en vollediger overzicht van alle relevante informatie...</p>
+  </div>
+</section>
+
+<!-- Neem deel aan de pilot -->
+<section class="bg-white py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight">Neem deel aan de pilot</h2>
+    <p class="mt-4 text-xl leading-relaxed">In het <strong>derde kwartaal van 2025</strong> starten we met de vlam-search pilot...</p>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? 900 : 300;
+      window.scrollBy({
+        top: scrollDistance,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 10);
+  });
+</script>
+
+</body>
+</html>
