@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vlam.ai</title>
+  <!-- Load Tailwind in the <head> so there's no flicker -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <style>
+    :root {
+      --groen-100: #39870C;
+      --groen-75: #6AA549;
+    }
+
+    /* Rijkshuisstijl fonts */
+    @font-face {
+      font-family: 'ROsanswebtextregular';
+      src: url('ROsanswebtextregular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'ROsanswebtextbold';
+      src: url('ROsanswebtextbold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Body font setup */
+    body {
+      font-family: 'ROsanswebtextregular', monospace;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Headings (Bold) */
+    h1, h2, h3, h4, h5, h6, strong {
+      font-family: 'ROsanswebtextbold', monospace;
+    }
+
+    /* Hero section title styles */
+    .hero-title {
+      font-family: 'ROsanswebtextbold', monospace;
+      font-size: 4rem; /* Adjusted font size */
+      color: #ffffff;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-subtitle {
+      font-family: 'ROsanswebtextbold', monospace;
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .hero-text {
+      font-family: 'ROsanswebtextregular', monospace;
+      font-size: 1.125rem;
+      color: #ffffff;
+      margin-top: 1rem;
+      line-height: 1.75;
+    }
+
+    /* Link styling for navigation items */
+    .link-heading {
+      font-family: 'ROsanswebtextbold', monospace;
+      font-size: 2rem;
+      color: #39870C; /* Green color */
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .link-text {
+      font-family: 'ROsanswebtextregular', monospace;
+      font-size: 1rem;
+      color: #000000;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="relative w-full flex flex-col md:flex-row h-auto md:h-screen overflow-hidden">
+
+  <!-- LEFT SIDE (Green) -->
+  <div
+    id="leftSideContent"
+    class="flex w-full md:w-1/2 bg-[var(--groen-100)] flex-col items-center justify-center px-12 text-center md:items-end md:text-left min-h-[500px] md:h-full"
+  >
+    <div class="max-w-[17rem]">
+      <h1 class="hero-title">vlam.ai</h1>
+      <p class="hero-subtitle">veilige lokale AI modellen</p>
+      <p class="hero-text">
+        Wij brengen AI-modellen veilig, snel en schaalbaar naar productie binnen de Rijksoverheid.
+      </p>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex w-full md:w-1/2 max-w-sm flex-col items-start justify-center px-12 text-[var(--groen-100)] mx-auto md:mx-0 min-h-[500px] md:h-full">
+    <!-- /api -->
+    <a href="api.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="link-heading">/api</h2>
+      <p class="link-text">
+        Breng veilig eigen AI-apps naar productie voor de Rijksoverheid.
+      </p>
+    </a>
+
+    <!-- /chat -->
+    <a href="chat.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="link-heading">/chat</h2>
+      <p class="link-text">
+        Chat veilig met generatieve AI zonder gevoelige data te lekken.
+      </p>
+    </a>
+
+    <!-- /search -->
+    <a href="search.html" class="fadeInRight mb-6 block group" rel="noopener noreferrer">
+      <h2 class="link-heading">/search</h2>
+      <p class="link-text">
+        Doorzoek snel openbare overheidsinformatie met krachtige AI.
+      </p>
+    </a>
+  </div>
+
+  <!-- Logo -->
+  <img src="RO_logo.svg" alt="Rijksoverheid Logo" class="absolute top-0 left-1/2 transform -translate-x-1/2 h-32" />
+
+</section>
+
+<!-- Section 2: Voor wie is vlam.ai bedoeld? -->
+<section class="bg-[#EBF3E7] py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight">Voor wie is /chat bedoeld?</h2>
+    <p class="mt-4 text-xl leading-relaxed">
+      Met vlam-chat kun je in een beveiligde omgeving communiceren met een AI-chatbot. Zo krijg je razendsnel antwoord op je vragen zonder je zorgen te maken over het lekken van gevoelige data. Onze chatdienst is ontwikkeld met strenge naleving van (Europese) privacyregels, zodat je vol vertrouwen kunt brainstormen, vragen stellen en inzichten delen.
+    </p>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? 900 : 300;
+
+      window.scrollBy({
+        top: scrollDistance,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 10);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vlam.ai</title>
+  <!-- Load Tailwind in the <head> so there's no flicker -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <style>
+    :root {
+      --groen-100: #39870C;
+      --groen-75: #6AA549;
+    }
+
+    @font-face {
+      font-family: 'ROsanswebtextregular';
+      src: url('ROsanswebtextregular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'ROsanswebtextbold';
+      src: url('ROsanswebtextbold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'ROsanswebtextregular', monospace;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, strong {
+      font-family: 'ROsanswebtextbold', monospace;
+    }
+
+    /* Text Styling */
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+    }
+
+    h3 {
+      font-size: 1.875rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="relative w-full flex flex-col md:flex-row h-auto md:h-screen overflow-hidden">
+
+  <div
+    id="leftSideContent"
+    class="flex
+           w-full md:w-1/2
+           bg-[var(--groen-100)]
+           flex-col items-center justify-center
+           px-12
+           text-center md:items-end md:text-left
+           min-h-[500px]
+           md:h-full
+    "
+  >
+    <div class="max-w-[17rem]">
+      <h1 class="text-white text-8xl font-bold tracking-tighter leading-[0.6]">vlam.ai</h1>
+      <p class="text-white mt-1 tracking-tight text-2xl font-bold">
+        veilige lokale AI modellen
+      </p>
+      <p class="text-white mt-3 text-lg leading-none">
+        Wij brengen AI-modellen veilig, snel en schaalbaar naar productie binnen de Rijksoverheid.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="flex
+           w-full md:w-1/2
+           max-w-sm
+           flex-col items-start justify-center
+           px-12
+           text-[var(--groen-100)]
+           mx-auto md:mx-0
+           min-h-[500px]
+           md:h-full
+    "
+  >
+    <!-- /api -->
+    <a 
+      href="api.html" 
+      class="fadeInRight mb-6 block group"
+      rel="noopener noreferrer"
+    >
+      <h2 class="underline text-5xl font-bold leading-none tracking-tight mb-2 group-hover:underline">
+        /api
+      </h2>
+      <p class="text-lg text-black leading-none">
+        Breng veilig eigen AI-apps naar productie voor de Rijksoverheid.
+      </p>
+    </a>
+
+    <!-- /chat -->
+    <a 
+      href="chat.html" 
+      class="fadeInRight mb-6 block group"
+      rel="noopener noreferrer"
+    >
+      <h2 class="opacity-50 text-4xl font-bold leading-none tracking-tight mb-2 group-hover:underline">
+        /chat
+      </h2>
+      <p class="opacity-50 text-base text-black leading-none">
+        Chat veilig met generatieve AI zonder gevoelige data te lekken.
+      </p>
+    </a>
+
+    <!-- /search -->
+    <a 
+      href="search.html" 
+      class="fadeInRight mb-6 block group"
+      rel="noopener noreferrer"
+    >
+      <h2 class="opacity-50 text-4xl font-bold leading-none tracking-tight mb-2 group-hover:underline">
+        /search
+      </h2>
+      <p class="opacity-50 text-base text-black leading-none">
+        Doorzoek snel openbare overheidsinformatie met krachtige AI.
+      </p>
+    </a>
+  </div>
+
+  <img
+    src="RO_logo.svg"
+    alt="Rijksoverheid Logo"
+    class="absolute top-0 left-1/2 transform -translate-x-1/2 h-32"
+  />
+
+</section>
+
+<!-- Section 2: Voor wie is vlam.ai bedoeld? -->
+<section class="bg-[#EBF3E7] py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight">Voor wie is vlam-api bedoeld?</h2>
+    <p class="mt-4 text-xl leading-relaxed">
+      De vlam-api pilot (en toekomstige dienst) is gericht op innovatie- en ontwikkelteams binnen de Rijksoverheid, zoals softwareontwikkelaars, datawetenschappers en IT-inkopers. Het platform is bedoeld voor professionals die AI-functionaliteit willen integreren in hun eigen applicaties, niet voor eindgebruikers die kant-en-klare oplossingen zoeken.
+    </p>
+    <p class="mt-4 text-xl leading-relaxed">
+      Door ons te richten op technische teams spelen we in op hun behoeften en ondersteunen we bij het veilig en effectief inzetten van AI binnen overheidsprocessen.
+    </p>
+  </div>
+</section>
+
+<!-- Section 3: Hoe werkt het?-->
+<section class="bg-white py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight mb-8">Hoe werkt het?</h2>
+    
+    <!-- Step 1 -->
+    <div class="flex items-start mb-8">
+      <div class="text-[#39870C] text-7xl font-bold mr-4">1.</div>
+      <p class="text-xl leading-relaxed">
+        <strong>Jij hebt een AI-functie in je applicatie</strong>, maar zoekt een manier om het AI-model veilig, lokaal en op schaal te draaien.
+      </p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex items-start mb-8">
+      <div class="text-[#39870C] text-7xl font-bold mr-4">2.</div>
+      <p class="text-xl leading-relaxed">
+        <strong>Neem contact op met SSC-ICT</strong> en lever je model aan, samen met de gewenste API-specificaties.
+      </p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex items-start mb-8">
+      <div class="text-[#39870C] text-7xl font-bold mr-4">3.</div>
+      <p class="text-xl leading-relaxed">
+        <strong>Wij zetten je model online</strong> en maken een API voor je beschikbaar.
+      </p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex items-start">
+      <div class="text-[#39870C] text-7xl font-bold mr-4">4.</div>
+      <p class="text-xl leading-relaxed">
+        <strong>Jouw applicatie kan live</strong>, met een veilig en schaalbaar AI-model achter de schermen.
+      </p>
+    </div>
+
+    <figure class="mt-8">
+      <img 
+        src="applicatie-infra.svg" 
+        alt="Schematische weergave van de interactie tussen de gebruiker, applicatie en het AI-model in vlam.ai." 
+        class="w-full"
+      />
+      <figcaption class="text-center text-gray-600 text-base mt-2 italic">
+        Schematische weergave van de interactie tussen de gebruiker, applicatie en het AI-model in vlam.ai.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Section 4: De voordelen op een rij -->
+<section class="bg-[#EBF3E7] py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight mb-8">De voordelen op een rij</h2>
+
+    <div class="mt-8 grid gap-8 md:grid-cols-2">
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Lokale infrastructuur</h3>
+        <p class="text-xl leading-relaxed">
+          Jouw data, de servers en de AI-modellen blijven altijd veilig binnen Nederland.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Security-by-design</h3>
+        <p class="text-xl leading-relaxed">
+          We voldoen aan alle relevante veiligheidsstandaarden die je binnen het Rijk mag verwachten, waaronder BIO en NIS2.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Toegang via een API</h3>
+        <p class="text-xl leading-relaxed">
+          Je kunt AI-functies integreren in je bestaande applicaties met behulp van gestandaardiseerde en schaalbare oplossingen.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Compliance-by-design</h3>
+        <p class="text-xl leading-relaxed">
+          We houden rekening met Nederlandse en Europese wetgeving, zodat je AI-model voldoet aan alle regels.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Gebouwd voor de toekomst -->
+<section class="bg-white py-16">
+  <div class="max-w-[768px] mx-auto px-4">
+    <h2 class="text-[#39870C] text-5xl font-bold tracking-tight mb-8">Gebouwd voor de toekomst</h2>
+
+    <div class="mt-8 grid gap-8 md:grid-cols-2">
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Geen vendor lock-in</h3>
+        <p class="text-xl leading-relaxed">
+          Onze software is volledig gebaseerd op Open Source software. Geen onderdelen van hyperscalers. Geen risico op vendor lock-in.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Draait op containers</h3>
+        <p class="text-xl leading-relaxed">
+          Het model is eenvoudig in containers te draaien, zodat je geen zorgen hebt over infrastructurele obstakels.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
